@@ -29,4 +29,4 @@ else:
 
 print("Shifting {} by all possible shifts.".format(text))
 for shift in range(0,26):
-    print(encrypt(text,shift))
+    print("{:>2}  |  {}".format(shift,encrypt(text,shift)))
