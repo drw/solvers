@@ -83,9 +83,16 @@ expected = [e*sum(observed)/sum(expected_unnormalized) for e in expected_unnorma
 print("Shifting {} by all possible shifts.".format(text))
 chisquared_min = 9999999999999
 shifted_min = None
+shift_min = None
 for shift in range(0,26):
     shifted, observed = encrypt_and_count(text,shift)
     chisquared = chisquared_stat(observed,expected)
+    if chisquared < chisquared_min:
+        chisquared_min = chisquared
+        shifted_min = shifted
+        shift_min = shift
+
     print("{:>2}  |  {}  | {:>8.1f}".format(shift,shifted,chisquared))
 
-
+print("\nBest guess based on chi-squared test:")
+print("    {:>2}  |  {}  | {:>8.1f}".format(shift_min,shifted_min,chisquared_min))
