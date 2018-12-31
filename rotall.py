@@ -1,5 +1,11 @@
+"""This script takes a string pasted to the console and outputs all 26 possible
+Caesar shifts on it, along with a chi-squared test statitstic, to help more rapidly
+identify which might match the letter frequency distribution of the English language.
+
+Example:
+    > python rotall.py QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"""
+
 import sys
-from pprint import pprint
 
 english_letter_freqs = {
     "a": 8.167,
