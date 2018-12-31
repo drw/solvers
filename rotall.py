@@ -3,7 +3,12 @@ Caesar shifts on it, along with a chi-squared test statitstic, to help more rapi
 identify which might match the letter frequency distribution of the English language.
 
 Example:
-    > python rotall.py QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD"""
+    > python rotall.py QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
+    
+To maybe do:
+    Better testing of the Englishness of a shifted string could be done
+    using the PyEnchant module, at the cost of having to install and import
+    the module."""
 
 import sys
 
