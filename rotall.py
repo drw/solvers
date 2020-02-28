@@ -76,7 +76,7 @@ def encrypt_and_count(string, shift):
         elif char.islower():
             n = (ord(char) + shift - 97) % 26
             cipher += chr(n + 97)
-            couns[n] += 1
+            counts[n] += 1
         else:
             cipher += char
 
